@@ -75,9 +75,11 @@ The notebook implements three machine learning models using the **Random Forest*
     .
     ├── Flight_Delay_Prediction.ipynb  # Complete analysis and code
     ├── README.md                      # Project documentation
+    ├── requirements.txt               # Project requirements
     └── Flight_Dataset.zip/            # Dataset directory
     
-5. To ensure smooth execution, install the requirements:
+    
+5. To ensure smooth execution, install the required libraries using::
    ```bash
    pip install -r requirements.txt
 
