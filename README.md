@@ -1,4 +1,4 @@
-# ✈ Weather and Flight Delay Prediction
+#  Weather and Flight Delay Prediction
 
 This project analyzes and predicts flight delays using machine learning techniques applied to both weather and flight schedule data. All code and analysis are contained within a single Jupyter Notebook.
 
@@ -24,7 +24,7 @@ The notebook implements three machine learning models using the **Random Forest*
 
 ---
 
-## 🔍 Model Highlights
+##  Model Highlights
 
 ###  Binary Classification
 - **Target**: `Delay_Label` (Delayed vs. On-Time)
