@@ -1,56 +1,65 @@
-# flight-delay-prediction
-📊 Weather and Flight Delay Prediction
-This project analyzes and predicts flight delays using machine learning techniques applied to both weather and flight schedule data. All work — including data preprocessing, model training, evaluation, and visualization — is contained within a single Jupyter Notebook.
+# ✈ Weather and Flight Delay Prediction
 
-🚀 Project Overview
-The notebook implements three models using the Random Forest algorithm:
+This project analyzes and predicts flight delays using machine learning techniques applied to both weather and flight schedule data. All code and analysis are contained within a single Jupyter Notebook.
 
-Binary Classification — Predict whether a flight is delayed or not.
+---
 
-Multiclass Classification — Classify the delay severity (No, Short, Moderate, Long).
+##  Project Overview
 
-Regression — Predict the exact delay time in minutes.
+The notebook implements three machine learning models using the **Random Forest** algorithm:
 
-📁 Dataset Preprocessing
-Cleaning: Removed irrelevant columns and handled missing values.
+- **Binary Classification** — Predict whether a flight will be delayed.
+- **Multiclass Classification** — Categorize the severity of delay (No, Short, Moderate, Long).
+- **Regression** — Predict the exact delay time in minutes.
 
-Encoding: Converted categorical values (IATA codes, status) using Label Encoding.
+---
 
-Scaling:
+##  Dataset Preprocessing
 
-Used Normalize() for binary classification.
+- **Cleaning**: Removed irrelevant columns and handled missing values.
+- **Encoding**: Categorical variables (e.g., IATA codes, status) encoded using Label Encoding.
+- **Scaling**:
+  - `Normalize()` for binary classification.
+  - `StandardScaler` for multiclass and regression models.
 
-Used StandardScaler for multiclass and regression models.
+---
 
-🔍 Model Highlights
-✅ Binary Classification
-Target: Delay_Label (Delayed vs. On-Time)
+## 🔍 Model Highlights
 
-Accuracy: 90.3% (Validation)
+###  Binary Classification
+- **Target**: `Delay_Label` (Delayed vs. On-Time)
+- **Model**: Random Forest Classifier
+- **Validation Accuracy**: 90.3%
+- **Evaluation**: Confusion Matrix, Precision-Recall Curve
+- **Tuning**: Optimized `n_estimators`, `max_depth`, `min_samples_split`
 
-Evaluation: Confusion Matrix, Precision-Recall Curve
+###  Multiclass Classification
+- **Target**: Delay severity (4 categories via `pd.cut`)
+- **Model**: Random Forest Classifier
+- **Accuracy**: 87.3%
+- **Evaluation**: Classification Report, Confusion Matrix
+- **Tuning**: Cross-validation + hyperparameter tuning
 
-Optimization: Tuned n_estimators, max_depth, min_samples_split
+###  Regression
+- **Target**: Exact delay time (continuous)
+- **Model**: Random Forest Regressor
+- **MAE**: 1.1 minutes  
+- **RMSE**: 2.2 minutes
+- **Evaluation**: Cross-validation, feature importance visualization
 
-🔢 Multiclass Classification
-Target: Delay severity (4 classes via pd.cut)
+---
 
-Accuracy: 87.3%
+##  Key Insights
 
-Evaluation: Classification Report, Confusion Matrix
+- **Weather Conditions** (temperature, wind speed, humidity) significantly impact delays.
+- **Flight Schedules** (e.g., hour of departure) correlate with delay likelihood.
+- **Random Forest Models** performed consistently well across all tasks.
 
-Optimization: Cross-validation and parameter tuning
+---
 
-📈 Regression
-Target: Continuous delay time
+##  How to Use
 
-MAE / RMSE: 1.1 / 2.2 minutes
-
-Optimization: Feature importance analysis, hyperparameter tuning
-
-📊 Key Insights
-Weather and Schedule strongly impact flight delays.
-
-Random Forest models performed robustly across tasks.
-
-Time of day (Scheduled Hour) is a useful predictive feature.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Malaika0136/flight-delay-prediction.git
+   cd flight-delay-prediction
