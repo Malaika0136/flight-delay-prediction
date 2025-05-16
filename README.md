@@ -63,3 +63,21 @@ The notebook implements three machine learning models using the **Random Forest*
    ```bash
    git clone https://github.com/Malaika0136/flight-delay-prediction.git
    cd flight-delay-prediction
+   
+2. Open the notebook:
+   ```bash
+    jupyter notebook Flight_Delay_Prediction.ipynb
+   
+3. Run all cells to reproduce the analysis and results.
+
+4.  Open the notebook:
+    ```bash
+    .
+    ├── Flight_Delay_Prediction.ipynb  # Complete analysis and code
+    ├── README.md                      # Project documentation
+    └── Flight_Dataset.zip/            # Dataset directory
+    
+5. To ensure smooth execution, install the requirements:
+   ```bash
+   pip install -r requirements.txt
+
